@@ -7,18 +7,41 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <EditText
-        android:id="@+id/et_Input"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"/>
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From : "  android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"/>
+        <EditText
+            android:hint="Enter The Temperature"
+            android:id="@+id/et_Input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            />
+    </LinearLayout>
 <RadioGroup
     android:id="@+id/radioGroup"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:layout_marginTop="45dp">
+    android:layout_marginTop="45dp"
+    android:gravity="center">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To :"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginRight="40dp"/>
     <RadioButton
         android:id="@+id/radio_f"
         android:layout_width="wrap_content"
@@ -36,6 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
+        android:gravity="center"
         android:layout_marginTop="45dp"/>
     <Button
         android:id="@+id/gettemperature"
